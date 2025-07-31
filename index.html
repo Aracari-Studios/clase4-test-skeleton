@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Conversaciones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/@radix-ui/themes@2.0.3/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Visualizador de<br>Conversaciones?<br><span style="color: var(--accent-color)">Sure. But Make It<br>Extraordinary.</span></h1>
+        </div>
+        <div class="table-container">
+            <table id="conversationsTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Usuario</th>
+                        <th>Canal</th>
+                        <th>País</th>
+                        <th>Fecha</th>
+                        <th>Tipo</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="pagination">
+                <button id="prevPage" class="btn pagination-btn" disabled>Anterior</button>
+                <span id="pageInfo">Página <span id="currentPage">1</span> de <span id="totalPages">1</span></span>
+                <button id="nextPage" class="btn pagination-btn">Siguiente</button>
+            </div>
+        </div>
+    </div>
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Mensajes de la Conversación</h2>
+            <div id="messagesList"></div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

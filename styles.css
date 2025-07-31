@@ -1,0 +1,211 @@
+/* Variables y reset */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #0a0a0a;
+    --accent-color: #7c3aed;
+    --accent-hover: #6d28d9;
+    --text-color: #ffffff;
+    --border-color: #1a1a1a;
+    --text-secondary: #a3a3a3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    letter-spacing: -0.025em;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.header {
+    margin: 4rem 0;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    text-align: left;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.05em;
+}
+
+/* Tabla */
+.table-container {
+    background-color: var(--secondary-color);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--border-color);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    border-top: 1px solid var(--border-color);
+}
+
+.pagination-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-color);
+    font-weight: 500;
+}
+
+.pagination-btn:disabled {
+    background-color: #4b5563;
+    cursor: not-allowed;
+}
+
+#pageInfo {
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+th {
+    background-color: var(--secondary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+tr:hover {
+    background-color: rgba(124, 58, 237, 0.1);
+}
+
+/* Botones */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--accent-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: var(--secondary-color);
+    margin: 10% auto;
+    padding: 2.5rem;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 700px;
+    position: relative;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#messagesList {
+    margin-top: 1rem;
+}
+
+.message {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 4px;
+}
+
+.message-role {
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* Skeleton Loading */
+.skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: rgba(124, 58, 237, 0.1);
+    }
+    100% {
+        background-color: rgba(124, 58, 237, 0.2);
+    }
+}
+
+.skeleton-text {
+    width: 100%;
+    height: 1rem;
+    margin: 0.2rem 0;
+    border-radius: 4px;
+}
+
+.skeleton-button {
+    width: 100px;
+    height: 2.5rem;
+    border-radius: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        margin: 1rem auto;
+    }
+
+    th, td {
+        padding: 0.5rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+}
