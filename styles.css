@@ -31,6 +31,9 @@ body {
 
 .header {
     margin: 4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 h1 {
@@ -41,6 +44,11 @@ h1 {
     line-height: 1.2;
     letter-spacing: -0.05em;
     max-width: 60%;
+}
+
+.logo {
+    object-fit: contain;
+    margin-left: 2rem;
 }
 
 /* Tabla */
