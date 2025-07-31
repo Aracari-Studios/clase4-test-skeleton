@@ -34,12 +34,13 @@ body {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin: 0;
     text-align: left;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.05em;
+    max-width: 60%;
 }
 
 /* Tabla */
