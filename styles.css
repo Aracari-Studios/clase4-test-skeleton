@@ -23,7 +23,8 @@ body {
     position: relative;
     min-height: 100vh;
     background-color: black;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 body::before {
@@ -3319,4 +3320,3 @@ tr:hover {
     }
 }
 
-.
